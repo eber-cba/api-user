@@ -6,8 +6,8 @@ const pool = new Pool({
   password: process.env.DB_PASS,
   database: process.env.DB_NAME,
   allowExitOnIdle: true,
-  ssl:
-    process.env.DB_HOST !== "localhost" ? { rejectUnauthorized: false } : false,
+
+  ssl: { rejectUnauthorized: false },
 });
 
 pool
